@@ -38,7 +38,6 @@ namespace TrilhaApiDesafio.Controllers
         public IActionResult ObterPorTitulo(string titulo)
         {
             // 
-            // 
             var tarefa = _context.Tarefas.Where(x => x.Titulo.Contains(titulo));
             return Ok(tarefa);
         }
@@ -103,7 +102,7 @@ namespace TrilhaApiDesafio.Controllers
             // 
             _context.Tarefas.Remove(tarefaBanco);
             _context.SaveChanges();
-            
+
             return NoContent();
         }
     }
